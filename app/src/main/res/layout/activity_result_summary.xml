@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_result_summary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eemf.quizapp.ResultSummaryActivity">
+
+    <ImageView
+        android:id="@+id/correctIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_correct"
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/wrongIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_wrong"
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAppBar"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/result_summary"
+            android:paddingLeft="14dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/colorAppName"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi"
+                style="@style/textFormat"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UserName!"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                style="@style/textFormat"
+                android:textSize="18dp"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find below the result of the quiz you just took."
+            android:lineSpacingExtra="16dp"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct Answer(s): "
+                style="@style/textFormatExtra"/>
+
+            <TextView
+                android:id="@+id/correctAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 (40%)"
+                style="@style/textFormat"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wrong Answer(s):  "
+                style="@style/textFormatExtra"/>
+
+            <TextView
+                android:id="@+id/wrongAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 (60%)"
+                style="@style/textFormat"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall Remark: "
+                style="@style/textFormatExtra"/>
+
+            <TextView
+                android:id="@+id/overallRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAILED"
+                style="@style/textFormatExtra"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Retry"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@color/colorStartButton"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/quitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quit"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@color/colorStartButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

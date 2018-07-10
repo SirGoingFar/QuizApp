@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eemf.quizapp.startActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_wallpaper"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="42sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="100dp"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/start_namefield"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/start_namefield_hint"
+            android:inputType="textCapWords"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:maxLength="25"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@android:color/black"/>
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/start_button_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@color/colorStartButton"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
